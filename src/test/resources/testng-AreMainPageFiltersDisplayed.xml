@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="AreFiltersDisplayed" verbose="1" >
+    <test name="filters"   >
+        <classes>
+            <class name="MainPageFiltersTest" />
+        </classes>
+    </test>
+</suite>
