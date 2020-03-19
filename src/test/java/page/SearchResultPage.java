@@ -48,14 +48,14 @@ public class SearchResultPage extends AbstractPage {
         elements.put("Date of next weekends", nextWeekends.get(0));
         elements.put("Search results", btnSearchResults);
         elements.put("Group Adults", ddlGroupAdults);
-        elements.put("Number of children",ddlNumberOfChildren);
+        elements.put("Number of children", ddlNumberOfChildren);
         return elements.get(NameOfElement);
     }
 
     public void chooseNextWeekends(String dateOfNextWeekends) {
-       WebElement element= DriverWaiter.waitToBeClickable(getWebElement(dateOfNextWeekends));
-       DriverWaiter.waitToBePresenceOfElementLocated(calendar);
-       element.click();
+        WebElement element = DriverWaiter.waitToBeClickable(getWebElement(dateOfNextWeekends));
+        DriverWaiter.waitToBePresenceOfElementLocated(calendar);
+        element.click();
     }
 
     public List<WebElement> getHotelList() {
@@ -66,19 +66,20 @@ public class SearchResultPage extends AbstractPage {
         return hotelsLocation;
     }
 
-    public void selectValueFromDropDown(String dropdown,String dropdownValue){
-        Select select =new Select(getWebElement(dropdown));
+    public void selectValueFromDropDown(String dropdown, String dropdownValue) {
+        Select select = new Select(getWebElement(dropdown));
         select.selectByVisibleText(dropdownValue);
 
     }
-     public String getSelectedOption(String dropdown){
-         Select select =new Select(getWebElement(dropdown));
-        return select.getFirstSelectedOption().getText();
-     }
 
-     public LondonHotelsPage clickSearch(String buttonName){
-       DriverWaiter.waitToBeClickable(getWebElement(buttonName)).click();
-       return new LondonHotelsPage(DriverSingleton.getDriver());
-     }
+    public String getSelectedOption(String dropdown) {
+        Select select = new Select(getWebElement(dropdown));
+        return select.getFirstSelectedOption().getText();
+    }
+
+    public LondonHotelsPage clickSearch(String buttonName) {
+        DriverWaiter.waitToBeClickable(getWebElement(buttonName)).click();
+        return new LondonHotelsPage(DriverSingleton.getDriver());
+    }
 
 }
