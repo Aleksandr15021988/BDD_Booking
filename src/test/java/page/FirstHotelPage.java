@@ -22,6 +22,15 @@ public class FirstHotelPage extends AbstractPage {
     @FindBy(xpath = "//div[3]/form/button/span[contains(.,'Reserve')]")
     private WebElement btnReserve;
 
+    public FirstHotelPage(WebDriver driver) {
+        super(driver);
+    }
+
+    public FirstHotelPage openPage(String FirstHotelPage) {
+        driver.navigate().to(FirstHotelPage);
+        return this;
+    }
+
     public WebElement getWebElement(String NameOfElement) {
         Map<String, WebElement> elements = new HashMap<String, WebElement>();
         elements.put("Number of rooms", ddlSelectNumberOfRooms.get(0));
@@ -31,22 +40,13 @@ public class FirstHotelPage extends AbstractPage {
     }
 
 
-    public FirstHotelPage(WebDriver driver) {
-        super(driver);
-    }
-
-    public FirstHotelPage openPage (String FirstHotelPage) {
-        driver.navigate().to(FirstHotelPage);
-        return this;
-    }
-
-    public void selectNumberOfRooms(String dropdown,String dropdownValue){
-        Select select =new Select(getWebElement(dropdown));
+    public void selectNumberOfRooms(String dropdown, String dropdownValue) {
+        Select select = new Select(getWebElement(dropdown));
         select.selectByValue(dropdownValue);
     }
 
-    public SecurePage clickOnReserveButton(String buttonName){
-        WebElement button =getWebElement(buttonName);
+    public SecurePage clickOnReserveButton(String buttonName) {
+        WebElement button = getWebElement(buttonName);
         DriverWaiter.waitToBeClickable(button).click();
         return new SecurePage(DriverSingleton.getDriver());
     }
