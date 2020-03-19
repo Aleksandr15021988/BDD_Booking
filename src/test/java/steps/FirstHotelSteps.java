@@ -13,20 +13,20 @@ public class FirstHotelSteps {
 
     FirstHotelPage firstHotelPage = new FirstHotelPage(DriverSingleton.getDriver());
 
-    @And("^I select '(.*)' in '(.*)' dropdown on First Hotel Page")
+    @And("^I select '(.*)' in '(.*)' dropdown on First Hotel Page$")
     public void selectValue(String value,String dropdown){
         DriverHelper.switchToNewWindow();
         firstHotelPage.selectNumberOfRooms(dropdown,value);
     }
 
-    @Then("^I verify that '(.*)' button is Enabled on First Hotel Page")
+    @Then("^I verify that '(.*)' button is Enabled on First Hotel Page$")
     public void verifyThatButtonIsEnabledOnFirstHotelPage(String buttonName) {
         WebElement button = firstHotelPage.getWebElement(buttonName);
         DriverWaiter.waitToBeClickable(button);
         Assert.assertTrue(button.isEnabled());
     }
 
-    @And("^I click button '(.*)' on First Hotel Page")
+    @And("^I click button '(.*)' on First Hotel Page$")
     public void ClickButton(String buttonName) {
         DriverWaiter.waitToBeClickable(firstHotelPage.getWebElement(buttonName)).click();
     }

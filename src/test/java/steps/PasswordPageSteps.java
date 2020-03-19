@@ -11,7 +11,7 @@ public class PasswordPageSteps {
     PasswordPage passwordPage = new PasswordPage(DriverSingleton.getDriver());
     UserData userData = UserCreator.withCredentialsFromProperty();
 
-    @And("^I feel '(.*)' as a password in '(.*)' field on Password Page")
+    @And("^I feel '(.*)' as a password in '(.*)' field on Password Page$")
     public void iFeelNAsAPassword(String password, String passwordTextField) {
         DriverWaiter.waitToBePresenceOfElementLocated(passwordPage.getWebElement(passwordTextField)).sendKeys(userData.getUserData(password));
 

@@ -10,7 +10,7 @@ public class LondonHotelsSteps {
 
     LondonHotelsPage londonHotelsPage = new LondonHotelsPage(DriverSingleton.getDriver());
 
-    @And("^I choose first hotel and click '(.*)' button")
+    @And("^I choose first hotel and click '(.*)' button$")
     public void ClickSelectYourRoomButton(String buttonName) {
        londonHotelsPage.getWebElement(buttonName).click();
 
