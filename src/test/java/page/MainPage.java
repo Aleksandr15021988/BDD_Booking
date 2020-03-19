@@ -40,12 +40,12 @@ public class MainPage extends AbstractPage {
         super(driver);
     }
 
-    public MainPage openPage (String MainPage) {
+    public MainPage openPage(String MainPage) {
         driver.navigate().to(MainPage);
         return this;
     }
 
-    public SearchResultPage clickOnButton(String nameOfButton){
+    public SearchResultPage clickOnButton(String nameOfButton) {
         getWebElement(nameOfButton).click();
         return new SearchResultPage(driver);
     }
@@ -53,13 +53,13 @@ public class MainPage extends AbstractPage {
     public WebElement getWebElement(String NameOfElement) {
         Map<String, WebElement> elements = new HashMap<String, WebElement>();
         elements.put("Profile picture", profilePicture);
-        elements.put("Where are you going",txtWhereAreYouGoing);
+        elements.put("Where are you going", txtWhereAreYouGoing);
         elements.put("Check in", checkIn);
         elements.put("Check out", checkOut);
-        elements.put("Choose number of Guests",chooseTheNumberOfGuests);
+        elements.put("Choose number of Guests", chooseTheNumberOfGuests);
         elements.put("Search", btnSearch);
-        elements.put("Choose Language",btnChooseLanguage);
-        elements.put("Choose English",btnChooseEnglish);
+        elements.put("Choose Language", btnChooseLanguage);
+        elements.put("Choose English", btnChooseEnglish);
         return elements.get(NameOfElement);
     }
 }
