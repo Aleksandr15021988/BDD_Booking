@@ -27,5 +27,4 @@ public class LondonHotelsPage extends AbstractPage {
         elements.put("Select Your Room", btnsSelectYourRoom.get(0));
         return elements.get(NameOfElement);
     }
-    
 }
