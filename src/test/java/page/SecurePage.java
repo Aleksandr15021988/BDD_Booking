@@ -17,7 +17,7 @@ public class SecurePage extends AbstractPage {
         super(driver);
     }
 
-    public SecurePage openPage (String SecurePage) {
+    public SecurePage openPage(String SecurePage) {
         driver.navigate().to(SecurePage);
         return this;
     }
@@ -28,7 +28,7 @@ public class SecurePage extends AbstractPage {
         return elements.get(NameOfElement);
     }
 
-    public String getValueFromTextField(String textFieldName){
+    public String getValueFromTextField(String textFieldName) {
         WebElement textField = getWebElement(textFieldName);
         DriverWaiter.waitToBePresenceOfElementLocated(textField);
         return textField.getAttribute("value");
