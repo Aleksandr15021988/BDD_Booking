@@ -13,7 +13,7 @@ public class UserData {
         this.password = password;
     }
 
-    public String getEmailAdress(){
+    public String getEmailAdress() {
         return emailAdress;
     }
 
@@ -22,7 +22,7 @@ public class UserData {
     }
 
     public String getUserData(String userData) {
-        Map<String, String> elements = new HashMap<String, String>();
+        Map<String, String> elements = new HashMap();
         elements.put("Default User", getEmailAdress());
         elements.put("Default Password", getPassword());
         return elements.get(userData);

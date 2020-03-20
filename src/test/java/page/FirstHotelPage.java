@@ -32,7 +32,7 @@ public class FirstHotelPage extends AbstractPage {
     }
 
     public WebElement getWebElement(String NameOfElement) {
-        Map<String, WebElement> elements = new HashMap<String, WebElement>();
+        Map<String, WebElement> elements = new HashMap();
         elements.put("Number of rooms", ddlSelectNumberOfRooms.get(0));
         elements.put("Reserve", btnReserve);
         elements.put("First room", ListOfRooms.get(0));

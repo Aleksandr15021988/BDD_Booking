@@ -26,7 +26,7 @@ public class LoginPage extends AbstractPage {
     }
 
     public WebElement getWebElement(String NameOfElement) {
-        Map<String, WebElement> elements = new HashMap<String, WebElement>();
+        Map<String, WebElement> elements = new HashMap();
         elements.put("User Name", txtUserName);
         elements.put("Continue", btnContinue);
         return elements.get(NameOfElement);

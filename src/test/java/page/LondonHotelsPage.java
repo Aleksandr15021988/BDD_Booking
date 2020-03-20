@@ -23,7 +23,7 @@ public class LondonHotelsPage extends AbstractPage {
     }
 
     public WebElement getWebElement(String NameOfElement) {
-        Map<String, WebElement> elements = new HashMap<String, WebElement>();
+        Map<String, WebElement> elements = new HashMap();
         elements.put("Select Your Room", btnsSelectYourRoom.get(0));
         return elements.get(NameOfElement);
     }

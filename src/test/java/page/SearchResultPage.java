@@ -44,7 +44,7 @@ public class SearchResultPage extends AbstractPage {
     }
 
     public WebElement getWebElement(String NameOfElement) {
-        Map<String, WebElement> elements = new HashMap<String, WebElement>();
+        Map<String, WebElement> elements = new HashMap();
         elements.put("Date of next weekends", nextWeekends.get(0));
         elements.put("Search results", btnSearchResults);
         elements.put("Group Adults", ddlGroupAdults);

@@ -23,7 +23,7 @@ public class SecurePage extends AbstractPage {
     }
 
     public WebElement getWebElement(String NameOfElement) {
-        Map<String, WebElement> elements = new HashMap<String, WebElement>();
+        Map<String, WebElement> elements = new HashMap();
         elements.put("Email", txtEmail);
         return elements.get(NameOfElement);
     }

@@ -27,12 +27,12 @@ public class PasswordPage extends AbstractPage {
 
 
     public WebElement getWebElement(String NameOfElement) {
-        Map<String, WebElement> elements = new HashMap<String, WebElement>();
+        Map<String, WebElement> elements = new HashMap();
         elements.put("Password", txtPassword);
         elements.put("Sign in", btnSignIn);
         return elements.get(NameOfElement);
     }
-    
+
     public MainPage clickOnButtonSignIn(String nameOfButton) {
         getWebElement(nameOfButton).click();
         return new MainPage(driver);

@@ -51,7 +51,7 @@ public class MainPage extends AbstractPage {
     }
 
     public WebElement getWebElement(String NameOfElement) {
-        Map<String, WebElement> elements = new HashMap<String, WebElement>();
+        Map<String, WebElement> elements = new HashMap();
         elements.put("Profile picture", profilePicture);
         elements.put("Where are you going", txtWhereAreYouGoing);
         elements.put("Check in", checkIn);
